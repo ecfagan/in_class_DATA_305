@@ -1,73 +1,164 @@
-<HEAD>
-<TITLE>Basic HTML Sample Page</TITLE>
-</HEAD>
-<BODY BGCOLOR="WHITE">
-<CENTER>
-<H1>A Simple Sample Web Page</H1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Fagan | Resume</title>
+    <style>
+        :root {
+            --primary: #00313C; /* W&M Green */
+            --secondary: #B1946C; /* W&M Gold */
+            --text: #333;
+            --bg: #f4f4f4;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 20px; text-align: center; }
+        h1 { margin: 0; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
+        .contact-info { margin-top: 10px; font-size: 0.9em; }
+        section { margin-bottom: 30px; }
+        h2 { border-bottom: 1px solid var(--secondary); color: var(--primary); font-size: 1.3em; margin-bottom: 15px; }
+        .entry { margin-bottom: 15px; }
+        .row { display: flex; justify-content: space-between; font-weight: bold; }
+        .sub-row { display: flex; justify-content: space-between; font-style: italic; font-size: 0.95em; }
+        ul { margin: 5px 0 10px 20px; padding: 0; }
+        li { margin-bottom: 5px; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .badge { background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
 
- 
+<div class="container">
+    <header>
+        [cite_start]<h1>Eric Fagan [cite: 1]</h1>
+        <div class="contact-info">
+            [cite_start]12005 Bennett Ct, Glen Allen, VA 23059 [cite: 2] | (804) [cite_start]814-9231 [cite: 2] | 
+            [cite_start]<a href="mailto:ecfagan@wm.edu">ecfagan@wm.edu</a> [cite: 2]
+        </div>
+    </header>
 
-  <IMG SRC="https://www.sheldonbrown.com/images/scb_eagle_contact.jpeg">
+    <section>
+        <h2>Education</h2>
+        <div class="entry">
+            <div class="row">
+                [cite_start]<span>William and Mary, Raymond A. Mason Business School [cite: 4]</span>
+                [cite_start]<span>Williamsburg, VA [cite: 4]</span>
+            </div>
+            <div class="sub-row">
+                [cite_start]<span>Major in Accounting, Minor in Data Science [cite: 5]</span>
+                [cite_start]<span>August 2023 – Present [cite: 7]</span>
+            </div>
+            <ul>
+                [cite_start]<li>3.48 GPA[cite: 6]; [cite_start]Dean's List Spring 2024, Fall 2024 [cite: 8]</li>
+                [cite_start]<li>Undergraduate Graduation/CPA Eligible: December 2026 (120 Credits) [cite: 9]</li>
+                [cite_start]<li>Masters of Accounting Completion: December 2027 (150 Credits) [cite: 10]</li>
+            </ul>
+        </div>
+    </section>
 
- 
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="entry">
+            <div class="row">
+                [cite_start]<span>KPMG [cite: 28]</span>
+                [cite_start]<span>Richmond, VA [cite: 29]</span>
+            </div>
+            <div class="sub-row">
+                [cite_start]<span>Incoming Audit Intern [cite: 31]</span>
+                [cite_start]<span>Starting May 2027 [cite: 30]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Selected for Global Advantage Program in Budapest, Hungary (Summer 2026) [cite: 32]</li>
+            </ul>
+        </div>
 
- 
+        <div class="entry">
+            <div class="row">
+                [cite_start]<span>Dominion Energy [cite: 12]</span>
+                [cite_start]<span>Richmond, VA [cite: 12]</span>
+            </div>
+            <div class="sub-row">
+                [cite_start]<span>Accounting Intern [cite: 14] (40 hours/week) [cite_start][cite: 12]</span>
+                [cite_start]<span>June 2025 – August 2025 [cite: 13]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Prepared ARO’s and CAPEX statements for various energy sectors [cite: 15]</li>
+                [cite_start]<li>Utilized Microsoft Excel and VBA to build and simplify company processes [cite: 16]</li>
+                [cite_start]<li>Accepted internship return offer for Summer 2026 [cite: 17]</li>
+            </ul>
+        </div>
 
-  <H4>By Sheldon Brown</H4>
+        <div class="entry">
+            <div class="row">
+                [cite_start]<span>Swim Club Management Group/Coastline Aquatics [cite: 33]</span>
+                [cite_start]<span>Richmond, VA [cite: 33]</span>
+            </div>
+            <div class="sub-row">
+                [cite_start]<span>Lifeguard/Lifeguard Manager [cite: 34] (40 hours/week) [cite_start][cite: 33]</span>
+                [cite_start]<span>May 2021 – August 2024 [cite: 33]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Managed a staff of 25 at a facility with 700 members [cite: 35]</li>
+                [cite_start]<li>Voted Lifeguard of the Year by upper management in 2024 [cite: 36]</li>
+            </ul>
+        </div>
+    </section>
 
-<H2>Demonstrating a few HTML features</H2>
+    <section>
+        <h2>Leadership & Involvement</h2>
+        <div class="entry">
+            <div class="row">
+                [cite_start]<span>Division 1 Cross Country and Track and Field [cite: 18]</span>
+                [cite_start]<span>Williamsburg, VA [cite: 18]</span>
+            </div>
+            <div class="sub-row">
+                [cite_start]<span>Middle/Long Distance Runner [cite: 20] (20 hours/week) [cite_start][cite: 18]</span>
+                [cite_start]<span>March 2024 – Present [cite: 19]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Compete in Cross Country, Indoor, and Outdoor Track disciplines [cite: 21]</li>
+                [cite_start]<li>Earned Colonial Athletic Association Academic Honors each semester [cite: 22]</li>
+            </ul>
+        </div>
 
-</CENTER>
+        <div class="entry">
+            <div class="row">
+                [cite_start]<span>Sigma Phi Epsilon, Virginia Delta Chapter [cite: 23]</span>
+                [cite_start]<span>Williamsburg, VA [cite: 23]</span>
+            </div>
+            <div class="sub-row">
+                [cite_start]<span>Member [cite: 25] (5 hours/week) [cite_start][cite: 23]</span>
+                [cite_start]<span>February 2024 – Present [cite: 24]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Engage in philanthropy including Kicks for Kids and Buddy Art [cite: 26]</li>
+                [cite_start]<li>Conduct interviews and give presentations to potential new members [cite: 27]</li>
+            </ul>
+        </div>
+    </section>
 
-HTML is really a very simple language. It consists of ordinary text, with commands that are enclosed by "<" and ">" characters, or bewteen an "&" and a ";". <P>
- 
+    <section>
+        <h2>Skills & Achievements</h2>
+        <div class="skills-grid">
+            <div>
+                [cite_start]<strong>Public Speaking [cite: 38]</strong>
+                <ul>
+                    [cite_start]<li>Virginia State Champion in public speaking [cite: 39]</li>
+                    [cite_start]<li>Delivered a TedTalk to an audience of over 500 [cite: 40]</li>
+                </ul>
+            </div>
+            <div>
+                [cite_start]<strong>Technology [cite: 41]</strong>
+                <ul>
+                    [cite_start]<li>Proficient in Microsoft programs [cite: 43]</li>
+                    [cite_start]<li>Basic Proficiency: Python, R, and VBA [cite: 42]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
 
-You don't really need to know much HTML to create a page, because you can copy bits of HTML from other pages that do what you want, then change the text!<P>
- 
-
-This page shows on the left as it appears in your browser, and the corresponding HTML code appears on the right. The HTML commands are linked to explanations of what they do.
- 
-
- 
-
-<H3>Line Breaks</H3>
-
-HTML doesn't normally use line breaks for ordinary text. A white space of any size is treated as a single space. This is because the author of the page has no way of knowing the size of the reader's screen, or what size type they will have their browser set for.<P>
-
- 
-
-If you want to put a line break at a particular place, you can use the "<BR>" command, or, for a paragraph break, the "<P>" command, which will insert a blank line. The heading command ("<4></4>") puts a blank line above and below the heading text.
-
- 
-
-<H4>Starting and Stopping Commands</H4>
-
-Most HTML commands come in pairs: for example, "<H4>" marks the beginning of a size 4 heading, and "</H4>" marks the end of it. The closing command is always the same as the opening command, except for the addition of the "/".<P>
-
- 
-
-Modifiers are sometimes included along with the basic command, inside the opening command's < >. The modifier does not need to be repeated in the closing command.
-
- 
-
- 
-
-<H1>This is a size "1" heading</H1>
-
-<H2>This is a size "2" heading</H2>
-
-<H3>This is a size "3" heading</H3>
-
-<H4>This is a size "4" heading</H4>
-
-<H5>This is a size "5" heading</H5>
-
-<H6>This is a size "6" heading</H6>
-
-<center>
-
-<H4>Copyright © 1997, by
-<A HREF="https://www.sheldonbrown.com/index.html">Sheldon Brown</A>
-</H4>
-
-If you would like to make a link or bookmark to this page, the URL is:<BR> https://www.sheldonbrown.com/web_sample1.html</body>
+</body>
+</html>
