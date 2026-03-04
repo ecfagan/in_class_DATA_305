@@ -1,214 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Fagan | Resume</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 40px 20px;
-        }
-        .resume-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 8px solid #00313C; /* W&M Green */
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h1 {
-            margin: 0;
-            color: #00313C;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .contact {
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: #666;
-        }
-        h2 {
-            color: #00313C;
-            border-bottom: 2px solid #B1946C; /* W&M Gold */
-            padding-bottom: 5px;
-            margin-top: 30px;
-            font-size: 1.4em;
-            text-transform: uppercase;
-        }
-        .entry {
-            margin-bottom: 20px;
-        }
-        .header-row {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            color: #222;
-        }
-        .sub-header-row {
-            display: flex;
-            justify-content: space-between;
-            font-style: italic;
-            color: #555;
-            margin-bottom: 8px;
-        }
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .skills-section {
-            display: flex;
-            gap: 40px;
-        }
-        .skills-column {
-            flex: 1;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eric Fagan | Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: #f4f6f8;
+        color: #333;
+    }
+
+    header {
+        background: #00313C;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        background: white;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav button {
+        background: #e5e5e5;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav button.active,
+    nav button:hover {
+        background: #00313C;
+        color: white;
+    }
+
+    .page {
+        display: none;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    h2 {
+        color: #00313C;
+        border-bottom: 2px solid #B1946C;
+        padding-bottom: 5px;
+        margin-top: 0;
+    }
+
+    .card {
+        background: #fafafa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #777;
+        font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
 </head>
+
 <body>
 
-<div class="resume-container">
-    <header>
-        <h1>Eric Fagan</h1>
-        <div class="contact">
-            12005 Bennett Ct, Glen Allen, VA 23059 | (804) 814-9231<br>
-            <a href="mailto:ecfagan@wm.edu">ecfagan@wm.edu</a>
-        </div>
-    </header>
+<header>
+    <h1>Eric Fagan</h1>
+    <p>Accounting & Data Science Student | Division I Athlete</p>
+</header>
 
-    <section>
-        <h2>Education</h2>
-        <div class="entry">
-            <div class="header-row">
-                <span>William and Mary, Raymond A. Mason Business School</span>
-                <span>Williamsburg, VA</span>
-            </div>
-            <div class="sub-header-row">
-                <span>Major in Accounting, Minor in Data Science</span>
-                <span>Aug 2023 – Present</span>
-            </div>
-            <ul>
-                <li><strong>GPA: 3.48</strong> (Dean's List Spring 2024, Fall 2024)</li>
-                <li>Undergraduate Graduation/CPA Eligible: Dec 2026 (120 Credits)</li>
-                <li>Masters of Accounting Completion: Dec 2027 (150 Credits)</li>
-            </ul>
-        </div>
-    </section>
+<nav>
+    <button onclick="showPage('home')" class="active">Home</button>
+    <button onclick="showPage('education')">Education</button>
+    <button onclick="showPage('experience')">Experience</button>
+    <button onclick="showPage('leadership')">Leadership</button>
+    <button onclick="showPage('skills')">Skills</button>
+    <button onclick="showPage('contact')">Contact</button>
+</nav>
 
-    <section>
-        <h2>Professional Experience</h2>
-        
-        <div class="entry">
-            <div class="header-row">
-                <span>KPMG</span>
-                <span>Richmond, VA</span>
-            </div>
-            <div class="sub-header-row">
-                <span>Incoming Audit Intern</span>
-                <span>Starting May 2027</span>
-            </div>
-            <ul>
-                <li>Selected for Global Advantage Program in Budapest, Hungary (Summer 2026)</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="header-row">
-                <span>Dominion Energy</span>
-                <span>Richmond, VA</span>
-            </div>
-            <div class="sub-header-row">
-                <span>Accounting Intern (40 hrs/week)</span>
-                <span>June 2025 – Aug 2025</span>
-            </div>
-            <ul>
-                <li>Prepared ARO’s and CAPEX statements for various energy sectors</li>
-                <li>Utilized Microsoft Excel and VBA to build and simplify company processes</li>
-                <li>Accepted internship return offer for Summer 2026</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="header-row">
-                <span>Lifeguard / Lifeguard Manager</span>
-                <span>Richmond, VA</span>
-            </div>
-            <div class="sub-header-row">
-                <span>Swim Club Management Group / Coastline Aquatics</span>
-                <span>2021 – 2024</span>
-            </div>
-            <ul>
-                <li>Managed a staff of 25 at a facility with 700 members</li>
-                <li>Voted Lifeguard of the Year by upper management in 2024</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Leadership & Athletics</h2>
-        <div class="entry">
-            <div class="header-row">
-                <span>Division 1 Cross Country and Track & Field</span>
-                <span>Williamsburg, VA</span>
-            </div>
-            <div class="sub-header-row">
-                <span>Middle/Long Distance Runner (20 hrs/week)</span>
-                <span>March 2024 – Present</span>
-            </div>
-            <ul>
-                <li>Competing in Cross Country, Indoor, and Outdoor Track disciplines</li>
-                <li>Earned Colonial Athletic Association Academic Honors each semester</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="header-row">
-                <span>Sigma Phi Epsilon (Virginia Delta Chapter)</span>
-                <span>Williamsburg, VA</span>
-            </div>
-            <div class="sub-header-row">
-                <span>Member</span>
-                <span>Feb 2024 – Present</span>
-            </div>
-            <ul>
-                <li>Engage in philanthropy including Kicks for Kids and Buddy Art</li>
-                <li>Conduct interviews and give presentations to potential new members</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills & Achievements</h2>
-        <div class="skills-section">
-            <div class="skills-column">
-                <strong>Public Speaking</strong>
-                <ul>
-                    <li>Virginia State Champion</li>
-                    <li>Delivered TedTalk to 500+ people</li>
-                </ul>
-            </div>
-            <div class="skills-column">
-                <strong>Technology</strong>
-                <ul>
-                    <li>Excel, VBA, Python, R</li>
-                    <li>Data Analytics & Accounting Software</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<div id="home" class="page active">
+    <h2>Welcome</h2>
+    <p>I am an Accounting major and Data Science minor at William & Mary with experience in public accounting, corporate accounting, leadership, and Division I athletics.</p>
 </div>
+
+<div id="education" class="page">
+    <h2>Education</h2>
+    <div class="card">
+        <strong>William & Mary – Raymond A. Mason Business School</strong><br>
+        Major: Accounting | Minor: Data Science<br>
+        GPA: 3.48 (Dean's List Spring & Fall 2024)<br>
+        CPA Eligible: Dec 2026 | MAcc Completion: Dec 2027
+    </div>
+</div>
+
+<div id="experience" class="page">
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+        <strong>KPMG – Incoming Audit Intern</strong><br>
+        Starting May 2027<br>
+        Selected for Global Advantage Program – Budapest (Summer 2026)
+    </div>
+
+    <div class="card">
+        <strong>Dominion Energy – Accounting Intern</strong><br>
+        Summer 2025<br>
+        <ul>
+            <li>Prepared ARO and CAPEX statements</li>
+            <li>Built Excel & VBA tools to streamline processes</li>
+            <li>Accepted return offer for Summer 2026</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <strong>Lifeguard Manager</strong><br>
+        Managed 25 staff members | Lifeguard of the Year (2024)
+    </div>
+</div>
+
+<div id="leadership" class="page">
+    <h2>Leadership & Athletics</h2>
+
+    <div class="card">
+        <strong>Division I Cross Country & Track</strong><br>
+        20 hrs/week commitment | CAA Academic Honors
+    </div>
+
+    <div class="card">
+        <strong>Sigma Phi Epsilon</strong><br>
+        Active in philanthropy and recruitment
+    </div>
+</div>
+
+<div id="skills" class="page">
+    <h2>Skills & Achievements</h2>
+
+    <div class="grid">
+        <div class="card">
+            <strong>Public Speaking</strong>
+            <ul>
+                <li>Virginia State Champion</li>
+                <li>Delivered TED-style talk to 500+ attendees</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <strong>Technology</strong>
+            <ul>
+                <li>Excel, VBA, Python, R</li>
+                <li>Data Analytics & Accounting Software</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="page">
+    <h2>Contact</h2>
+    <p>📍 Glen Allen, VA</p>
+    <p>📞 (804) 814-9231</p>
+    <p>✉️ ecfagan@wm.edu</p>
+</div>
+
+<footer>
+    © 2026 Eric Fagan
+</footer>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        const buttons = document.querySelectorAll('nav button');
+
+        pages.forEach(page => page.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(pageId).classList.add('active');
+        event.target.classList.add('active');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>
